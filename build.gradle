@@ -1,0 +1,27 @@
+apply plugin: 'java'
+apply plugin: 'project-report'
+apply plugin: 'eclipse'
+
+
+group = 'org.msgilligan.dojo'
+version = 0.1
+
+def compatibilityVersion = 1.6
+sourceCompatibility = compatibilityVersion
+targetCompatibility = compatibilityVersion
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+repositories {
+    maven { url 'http://oss.sonatype.org/content/repositories/snapshots/' }
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.8.1'
+}
+
